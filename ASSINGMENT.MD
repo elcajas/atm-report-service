@@ -1,15 +1,31 @@
-This ATM Report Service is designed to process transactions/logs from different ATMs (A, B, C, D), which generate transactions in other formats (XML, CSV, JSON, YAML) daily. The service generates reports based on the transaction data and exposes them as REST APIs.
-Features
-Supports multiple transaction file formats: XML, CSV, JSON, YAML
-Exposes REST APIs to get daily transaction summaries, ATM-specific summaries, and type-based summaries
-ATM IDs: A, B, C, D
-Transaction Types: WITHDRAW, DEPOSIT, BALANCE_TRANSFER
-Technology stack:
-Java 21, Spring boot 3 + 
-Postgres
-transactionId,transactionDate,cardNumber,transactionType,amount,destinationCardNumber
-12345,2025-02-05T14:30:00,1234-5678-9876-5432,DEPOSIT,150.75,
-12346,2025-02-05T15:00:00,1234-5678-9876-5432,BALANCE_TRANSFER,500.00,9876-5432-1234-5678
+# ATM Report Service
+
+This ATM Report Service is designed to process transactions/logs from different ATMs (A, B, C, D), which generate transactions in various formats (XML, CSV, JSON, YAML) daily. The service generates reports based on the transaction data and exposes them as REST APIs.
+
+## Features
+
+- Supports multiple transaction file formats: **XML, CSV, JSON, YAML**
+- Exposes REST APIs to:
+  - Get daily transaction summaries
+  - Get ATM-specific summaries
+  - Get transaction-type-based summaries
+- Supported ATM IDs: `A`, `B`, `C`, `D`
+- Supported Transaction Types: `WITHDRAW`, `DEPOSIT`, `BALANCE_TRANSFER`
+
+## Technology Stack
+
+- Java 21
+- Spring Boot 3
+- PostgreSQL
+
+## Example Transaction Data
+
+### CSV Format
+
+transactionId,transactionDate,cardNumber,transactionType,amount,destinationCardNumber 12345,2025-02-05T14:30:00,1234-5678-9876-5432,DEPOSIT,150.75, 12346,2025-02-05T15:00:00,1234-5678-9876-5432,BALANCE_TRANSFER,500.00,9876-5432-1234-5678
+
+### JSON Format
+```json
 [
   {
     "transactionId": "12345",
@@ -21,11 +37,3 @@ transactionId,transactionDate,cardNumber,transactionType,amount,destinationCardN
   }
 ]
 
-Date, Total Amount, Count
-Date, ATM, Total Amount, Count
-Date, Type, Total Amount, Count
-Date, ATM, Type, Total Amount, Count
-
-Exposed as APIs
-Files loader to DB.
-APIs reading from Db
