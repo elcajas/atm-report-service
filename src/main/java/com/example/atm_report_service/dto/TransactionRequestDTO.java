@@ -1,6 +1,5 @@
 package com.example.atm_report_service.dto;
 
-import com.example.atm_report_service.model.enums.AtmType;
 import com.example.atm_report_service.model.enums.TransactionType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,7 +14,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 public class TransactionRequestDTO {
-    private AtmType atmType;
     private String transactionId;
     private LocalDateTime transactionDate;
     private String cardNumber;
