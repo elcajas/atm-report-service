@@ -1,0 +1,36 @@
+This ATM Report Service is designed to process transactions/logs from different ATMs (A, B, C, D), which generate transactions in other formats (XML, CSV, JSON, YAML) daily. The service generates reports based on the transaction data and exposes them as REST APIs.
+
+Features
+Supports multiple transaction file formats: XML, CSV, JSON, YAML
+Exposes REST APIs to get daily transaction summaries, ATM-specific summaries, and type-based summaries
+ATM IDs: A, B, C, D
+Transaction Types: WITHDRAW, DEPOSIT, BALANCE_TRANSFER
+Transaction key fields: transactionId,transactionDate,cardNumber,transactionType,amount,destinationCardNumber
+
+Technology stack:
+Java 21, Spring boot 3 + 
+Postgres
+
+
+Four Formats:
+XML
+CSV
+JSON
+YAML
+
+Reports summary:
+get daily transaction summaries
+ATM-specific summaries
+type-based summaries
+
+Reports fields:
+Date, Total Amount, Count
+Date, ATM, Total Amount, Count
+Date, Type, Total Amount, Count
+Date, ATM, Type, Total Amount, Count
+
+Exposed as APIs
+
+Files loader to DB.
+APIs reading from DB
+21st. April

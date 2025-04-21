@@ -1,0 +1,26 @@
+<List>
+  <Transaction>
+    <transactionId>22345</transactionId>
+    <transactionDate>2025-04-19T14:30:00</transactionDate>
+    <cardNumber>2234-5678-9876-5432</cardNumber>
+    <transactionType>DEPOSIT</transactionType>
+    <amount>200.75</amount>
+    <destinationCardNumber></destinationCardNumber>
+  </Transaction>
+  <Transaction>
+    <transactionId>22346</transactionId>
+    <transactionDate>2025-04-19T15:30:00</transactionDate>
+    <cardNumber>2234-5678-9876-5433</cardNumber>
+    <transactionType>WITHDRAW</transactionType>
+    <amount>100.75</amount>
+    <destinationCardNumber></destinationCardNumber>
+  </Transaction>
+  <Transaction>
+    <transactionId>22347</transactionId>
+    <transactionDate>2025-04-19T16:30:00</transactionDate>
+    <cardNumber>2234-5678-9876-5434</cardNumber>
+    <transactionType>BALANCE_TRANSFER</transactionType>
+    <amount>50.75</amount>
+    <destinationCardNumber>2234-5678-9876-5435</destinationCardNumber>
+  </Transaction>
+</List>

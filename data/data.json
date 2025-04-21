@@ -1,0 +1,26 @@
+[
+    {
+        "transactionId": "12345",
+        "transactionDate": "2025-04-18T14:30:00",
+        "cardNumber": "1234-5678-9876-5432",
+        "transactionType": "DEPOSIT",
+        "amount": 100.75,
+        "destinationCardNumber": ""
+    },
+    {
+        "transactionId": "12346",
+        "transactionDate": "2025-04-18T15:30:00",
+        "cardNumber": "1234-5678-9876-5433",
+        "transactionType": "WITHDRAW",
+        "amount": 200.75,
+        "destinationCardNumber": ""
+    },
+    {
+        "transactionId": "12347",
+        "transactionDate": "2025-04-18T16:30:00",
+        "cardNumber": "1234-5678-9876-5434",
+        "transactionType": "BALANCE_TRANSFER",
+        "amount": 50.75,
+        "destinationCardNumber": "1234-5678-9876-5435"
+    }
+]
